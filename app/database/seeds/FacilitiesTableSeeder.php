@@ -14,8 +14,9 @@ class FacilitiesTableSeeder extends Seeder {
         	'description'		=> 'This is the city hall of Atlanta',
         	'phone'				=> '5555555555',
         	'contact_name'		=> 'John Doe',
-        	'email'				=> 'john@doe.com'
-        ]
+        	'email'				=> 'john@doe.com',
+        ],
+
     ];
 
     DB::table('Facilities')->insert($Facilities);
