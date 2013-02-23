@@ -10,7 +10,6 @@ class FacilitiesController extends BaseController {
 	public function index()
 	{
 		$input = Input::all();
-
 		if ( isset($input['zip']) or isset($input['lat1']) or isset($input['lat']) )
 			return $this->router($input);
 		return Facility::all();
@@ -43,7 +42,11 @@ class FacilitiesController extends BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$facility = Facility::find($id);
+		if ( $facility )
+			return Facility::find($id);
+		else
+			return Redirect::action('FacilitiesController@index');
 	}
 
 	/**
@@ -63,7 +66,8 @@ class FacilitiesController extends BaseController {
 	 */
 	public function update($id)
 	{
-		$
+		$facility = Facility::find($id);
+		$input = Input::get('')
 	}
 
 	/**
@@ -79,10 +83,22 @@ class FacilitiesController extends BaseController {
 	public function router($input)
 	{
 		if( isset($input['zip']) ) {
-			return $this->search_by_zip( );
+			return $this->search_by_zip($input['zip']);
 		}
 		else if( isset($input['lat1']) )
 			return $this->search_square($input['lat1'], $input['lng1'], $input['lat2'], $input['lng2']);
+	}
+
+	public function search_by_zip($zip)
+	{
+		$ret = array(); 
+		foreach ($facilities = Facility::all() as $indfac)
+		{
+			if ($indfac->address_zip == $zip)
+				$ret[] = $indfac->toArray();
+		}
+		// var_dump($ret); die();
+		return '<pre>' . json_encode($ret) . '</pre>';
 	}
 
 }
