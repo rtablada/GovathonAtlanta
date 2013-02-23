@@ -1,5 +1,5 @@
 # TypeError: 'undefined' is not an object (evaluating 'newRoute.$route.controller')
-    at http://localhost:3501/scripts/6637efbe.main.js:137
+    at http://localhost:3501/scripts/5b41f0a3.main.js:134
     at http://localhost:3501/components/angular/angular.js:8243
     at updateRoute (http://localhost:3501/components/angular/angular.js:7349)
     at http://localhost:3501/components/angular/angular.js:8243
@@ -17,7 +17,7 @@
     at http://localhost:3501/components/angular/angular.js:1958 (undefined, #undefined)
 CACHE MANIFEST
 
-# Time: Sat Feb 23 2013 13:17:24 GMT-0500 (Eastern Standard Time)
+# Time: Sat Feb 23 2013 13:26:16 GMT-0500 (Eastern Standard Time)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/#/about
@@ -46,7 +46,7 @@ http://localhost:3501/images/53f46de4.glyphicons-halflings.png
 http://localhost:3501/images/bce06151.bg.jpg
 https://maps.googleapis.com/maps/api/js?key=AIzaSyCO30yN3rweCsE4wqPCUyMH-bpBgK8GYpM&sensor=false
 https://maps.gstatic.com/intl/en_us/mapfiles/api-3/12/0/main.js
-scripts/6637efbe.main.js
+scripts/5b41f0a3.main.js
 scripts/6def94c3.plugins.js
 scripts/vendor/cf69c6f2.modernizr.min.js
 styles/d613064d.main.css
