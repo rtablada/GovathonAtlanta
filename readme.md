@@ -10,7 +10,7 @@ This project uses Laravel 4 and requires some setup to work.
 
 If you do not have composer, then do yourself a favor and follow this guide: http://net.tutsplus.com/tutorials/php/easy-package-management-with-composer/
 
-For you windows users, try this one? http://diywebdev.com/setting-up-composer-php-dependencies-manager-in-windows/
+Otherwise, you can run ```php composer.phar update```
 
 ### Install dependancies
 
