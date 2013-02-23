@@ -67,7 +67,7 @@ class FacilitiesController extends BaseController {
 	public function update($id)
 	{
 		$facility = Facility::find($id);
-		$input = Input::get('')
+		$input = Input::json();
 	}
 
 	/**
@@ -91,13 +91,14 @@ class FacilitiesController extends BaseController {
 
 	public function search_by_zip($zip)
 	{
-		$ret = array(); 
+		$ret = array();
+
 		foreach ($facilities = Facility::all() as $indfac)
 		{
 			if ($indfac->address_zip == $zip)
 				$ret[] = $indfac->toArray();
 		}
-		// var_dump($ret); die();
+
 		return '<pre>' . json_encode($ret) . '</pre>';
 	}
 
@@ -111,10 +112,9 @@ class FacilitiesController extends BaseController {
             $facilities = DB::table('facilities')
                     ->where('lat','BETWEEN', DB::raw($lat1.' AND '.$lat2)
                     ->where('lng','BETWEEN', DB::raw($lng1.' AND '.$lng2)
-                    ->get()->to;
+                    ->get();
 
-            var_dump($facilities); die();
-            return $facilities;
+            return json_encode($facilities);
     }
 
 }
