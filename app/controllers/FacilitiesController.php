@@ -22,18 +22,12 @@ class FacilitiesController extends BaseController {
 	 */
 	public function store()
 	{
-		$facility = new Facility();
-		$input = Input::json();
+		
+		$input = Input::all();
 
-		$facility->name 			= $input['name'];
-		$facility->address_street 	= $input['address_street'];
-		$facility->address_zip 		= $input['address_zip'];
-		$facility->area 			= $input['area'];
-		$facility->cost 			= $input['cost'];
-		$facility->description 		= $input['description'];
-		$facility->phone 			= $input['phone'];
-		$facility->contact_name 	= $input['contact_name'];
-		$facility->email 			= $input['email'];
+		var_dump($input); die();
+		$facility = Facility::create($input);
+
 		return $facility->updateGeocode();
 	}
 

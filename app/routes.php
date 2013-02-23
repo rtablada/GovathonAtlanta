@@ -16,6 +16,11 @@ Route::get('/', function()
 	return Redirect::to('index.html');
 });
 
+Route::get('addr', function()
+{
+	return;
+});
+
 Route::resource('facilities', 'FacilitiesController');
 
 Route::resource('amenities', 'AmenitiesController');
