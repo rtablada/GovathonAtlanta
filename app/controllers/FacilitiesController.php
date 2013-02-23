@@ -16,23 +16,25 @@ class FacilitiesController extends BaseController {
 	}
 
 	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
-
-	/**
 	 * Store a newly created resource in storage.
 	 *
 	 * @return Response
 	 */
 	public function store()
 	{
-		//
+		$facility = new Facility();
+		$input = Input::json();
+
+		$facility->name 			= $input['name'];
+		$facility->address_street 	= $input['address_street'];
+		$facility->address_zip 		= $input['address_zip'];
+		$facility->area 			= $input['area'];
+		$facility->cost 			= $input['cost'];
+		$facility->description 		= $input['description'];
+		$facility->phone 			= $input['phone'];
+		$facility->contact_name 	= $input['contact_name'];
+		$facility->email 			= $input['email'];
+		return $facility->updateGeocode();
 	}
 
 	/**
@@ -50,16 +52,6 @@ class FacilitiesController extends BaseController {
 	}
 
 	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
 	 * Update the specified resource in storage.
 	 *
 	 * @return Response
@@ -68,6 +60,17 @@ class FacilitiesController extends BaseController {
 	{
 		$facility = Facility::find($id);
 		$input = Input::json();
+
+		$facility->name 			= $input['name'];
+		$facility->address_street 	= $input['address_street'];
+		$facility->address_zip 		= $input['address_zip'];
+		$facility->area 			= $input['area'];
+		$facility->cost 			= $input['cost'];
+		$facility->description 		= $input['description'];
+		$facility->phone 			= $input['phone'];
+		$facility->contact_name 	= $input['contact_name'];
+		$facility->email 			= $input['email'];
+		return $facility->updateGeocode();
 	}
 
 	/**
