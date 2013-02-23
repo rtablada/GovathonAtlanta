@@ -102,7 +102,7 @@ class FacilitiesController extends BaseController {
 				$ret[] = $indfac->toArray();
 		}
 
-		return '<pre>' . json_encode($ret) . '</pre>';
+		return json_encode($ret);
 	}
 
     /**
@@ -112,12 +112,20 @@ class FacilitiesController extends BaseController {
      */
     public function search_square($lat1,$lng1,$lat2,$lng2)
     {
-        $facilities = DB::table('facilities')
-                ->where('lat','BETWEEN', DB::raw($lat1.' AND '.$lat2))
-                ->where('lng','BETWEEN', DB::raw($lng1.' AND '.$lng2))
-                ->get();
+    	$facilities = Facility::all();
+    	$ret = array();
 
-        return json_encode($facilities);
+    	foreach ($facilities as $facility) {
+    		if ( ( $facility->latitude > $lat1 AND $facility->latitude < $lat2 ) OR ( $facility->latitude < $lat1 AND $facility->latitude > $lat2 ) )
+    		{
+    			if ( ( $facility->longitude > $lng1 AND $facility->longitude < $lng2 ) OR ( $facility->longitude < $lng1 AND $facility->longitude > $lng2 ) )
+    			{
+    				$ret[] = $facility->toArray();
+    			}
+    		}
+    	}
+
+        return json_encode($ret);
     }
 
 }

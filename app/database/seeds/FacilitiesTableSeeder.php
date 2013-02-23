@@ -15,8 +15,8 @@ class FacilitiesTableSeeder extends Seeder {
             'phone'             => '5555555555',
             'contact_name'      => 'John Doe',
             'email'             => 'john@doe.com',
-            'latitude'               => '33.74895280',
-            'longitude'               => '-84.39049340'
+            'latitude'          => '33.74895280',
+            'longitude'         => '-84.39049340'
         ],
         [ 
             'name'              => 'Trinity Church',
@@ -28,7 +28,7 @@ class FacilitiesTableSeeder extends Seeder {
             'phone'             => '3333333333',
             'contact_name'      => 'Jim Smith',
             'email'             => 'jim@smith.com',
-            'latitude'               => '33.74253220',
+            'latitude'          => '33.74253220',
             'lng'               => '-84.39047680'
         ],
         [ 
@@ -41,7 +41,7 @@ class FacilitiesTableSeeder extends Seeder {
             'phone'             => '1111111111',
             'contact_name'      => 'Sue Jones',
             'email'             => 'sue@jones.com',
-            'latitude'               => '33.77829538029150',
+            'latitude'          => '33.77829538029150',
             'lng'               => '-84.38579221970851'
         ],
         [ 
