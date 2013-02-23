@@ -10,7 +10,7 @@ This project uses Laravel 4 and requires some setup to work.
 
 If you do not have composer, then do yourself a favor and follow this guide: http://net.tutsplus.com/tutorials/php/easy-package-management-with-composer/
 
-Otherwise, you can run ```php composer.phar update```
+If you really don't want to install composer globally (though it is really an awesome tool for modular coding), you can run ```php composer.phar update```
 
 ### Install dependancies
 
