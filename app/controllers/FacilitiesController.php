@@ -101,4 +101,20 @@ class FacilitiesController extends BaseController {
 		return '<pre>' . json_encode($ret) . '</pre>';
 	}
 
+    /**
+     * Find facilities within a given boundary
+     *
+     * @return Response
+     */
+    public function search_square($lat1,$lng1,$lat2,$lng2)
+    {
+            $facilities = DB::table('facilities')
+                    ->where('lat','BETWEEN', DB::raw($lat1.' AND '.$lat2)
+                    ->where('lng','BETWEEN', DB::raw($lng1.' AND '.$lng2)
+                    ->get()->to;
+
+            var_dump($facilities); die();
+            return $facilities;
+    }
+
 }
