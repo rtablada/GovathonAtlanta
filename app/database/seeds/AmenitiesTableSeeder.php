@@ -8,7 +8,7 @@ class AmenitiesTableSeeder extends Seeder {
         
     ];
 
-    DB::table('Amenities')->insert($Amenities);
+    DB::table('amenities')->insert($Amenities);
   }
 
 }

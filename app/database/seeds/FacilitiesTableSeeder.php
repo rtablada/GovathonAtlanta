@@ -19,7 +19,7 @@ class FacilitiesTableSeeder extends Seeder {
 
     ];
 
-    DB::table('Facilities')->insert($Facilities);
+    DB::table('facilities')->insert($Facilities);
   }
 
 }
