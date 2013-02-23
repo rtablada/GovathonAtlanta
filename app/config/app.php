@@ -109,7 +109,9 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-
+		'Meido\Form\FormServiceProvider',
+		'Meido\HTML\HTMLServiceProvider',
+		'Way\Generators\GeneratorsServiceProvider'
 	),
 
 	/*
@@ -172,7 +174,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-
+		'Form'            => 'Meido\Form\FormFacade',
+		'HTML'            => 'Meido\HTML\HTMLFacade',
 	),
 
 );

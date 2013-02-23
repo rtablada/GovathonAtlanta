@@ -15,3 +15,7 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::resource('facilities', 'FacilitiesController');
+
+Route::resource('amenities', 'AmenitiesController');
