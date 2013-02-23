@@ -1,25 +1,29 @@
+global:
+  env:
+    - LARAVEL_ENV: production
 web1:
-  shared_writable_dirs:
-    - app/storage/cache
-    - app/storage/logs
-    - app/storage/meta
-    - app/storage/sessions
-    - app/storage/views
-  document_root: public
-  php_extensions:
-    - apc
-    - bcmath
-    - mcrypt
-    - memcached
-    - pdo_mysql
-    - redis
-    - zip
-    - rar
+  name: govathon
+  document_root: /public
+  php_version: 5.3.10
   after_build:
-    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar install"
+    - "php composer.phar install"
+    - "php composer.phar update"
+    - "php composer.phar dump-autoload"
+  shared_writable_dirs:
+    - /app/storage
+    - /app/storage/cache
+    - /app/storage/logs
+    - /app/storage/meta
+    - /app/storage/sessions
+    - /app/storage/views
+  php_extensions:
+    - memcache
+    - memcached
+    - mysql
+    - gd
+    - zip
+    - mcrypt
+    - pdo_mysql
   before_deploy:
+    - "php artisan migrate:install"
     - "php artisan migrate"
-    - "php artisan db:seed"
-  after_deploy:
-    - "rm -f app/storage/cache/*"
-    - "rm -f app/storage/views/*"
