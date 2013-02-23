@@ -63,7 +63,7 @@ class FacilitiesController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$
 	}
 
 	/**
@@ -78,8 +78,9 @@ class FacilitiesController extends BaseController {
 
 	public function router($input)
 	{
-		if( isset($input['zip']) )
+		if( isset($input['zip']) ) {
 			return $this->search_by_zip( );
+		}
 		else if( isset($input['lat1']) )
 			return $this->search_square($input['lat1'], $input['lng1'], $input['lat2'], $input['lng2']);
 	}
