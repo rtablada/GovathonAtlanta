@@ -5,10 +5,14 @@ class FacilitiesController extends BaseController {
 	/**
 	 * Display a listing of the resource.
 	 *
-	 * @return Response
+	 * @return JSON array of facilities
 	 */
 	public function index()
 	{
+		$input = Input::all();
+
+		if ( isset($input['zip']) or isset($input['lat1']) or isset($input['lat']) )
+			return $this->router($input);
 		return Facility::all();
 	}
 
@@ -70,6 +74,14 @@ class FacilitiesController extends BaseController {
 	public function destroy($id)
 	{
 		//
+	}
+
+	public function router($input)
+	{
+		if( isset($input['zip']) )
+			return $this->search_by_zip( );
+		else if( isset($input['lat1']) )
+			return $this->search_square($input['lat1'], $input['lng1'], $input['lat2'], $input['lng2']);
 	}
 
 }
