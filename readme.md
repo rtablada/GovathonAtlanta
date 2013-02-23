@@ -1,13 +1,25 @@
-## Laravel 4.x
+## Govathon Atlanta - NPO Space Finder
 
-### A Framework For Web Artisans
+This is the working repository for the Govathon Project on Feb 22-23.
 
-[Official Documentation](http://four.laravel.com) (Under Active Development)
+## Installation instructions
 
-### Contributing To Laravel
+This project uses Laravel 4 and requires some setup to work.
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+### Installing Composer
 
-### License
+If you do not have composer, then do yourself a favor and follow this guide: http://net.tutsplus.com/tutorials/php/easy-package-management-with-composer/
 
-The Laravel framework is open-sourced software license under the [MIT license](http://opensource.org/licenses/MIT)
+For you windows users, try this one? http://diywebdev.com/setting-up-composer-php-dependencies-manager-in-windows/
+
+### Install dependancies
+
+Now you should be able to run ```composer install``` in the directory of the repository and all should be well and good. (This can take a bit of time).
+
+### Configuration options
+
+By going into app/config/database.php you should be able to set up your credentials for your local database.
+
+### Running the server
+
+If you've got PHP 5.4 just runn ```php artisan serve``` and PHP will start a local server which can be accessed at localhost:8000
