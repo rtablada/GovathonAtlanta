@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
+			'host'      => 'sere1.com',
 			'database'  => 'govathon',
 			'username'  => 'root',
-			'password'  => 'root',
+			'password'  => 'mysql23',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
