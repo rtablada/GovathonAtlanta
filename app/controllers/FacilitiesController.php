@@ -109,12 +109,12 @@ class FacilitiesController extends BaseController {
      */
     public function search_square($lat1,$lng1,$lat2,$lng2)
     {
-            $facilities = DB::table('facilities')
-                    ->where('lat','BETWEEN', DB::raw($lat1.' AND '.$lat2)
-                    ->where('lng','BETWEEN', DB::raw($lng1.' AND '.$lng2)
-                    ->get();
+        $facilities = DB::table('facilities')
+                ->where('lat','BETWEEN', DB::raw($lat1.' AND '.$lat2))
+                ->where('lng','BETWEEN', DB::raw($lng1.' AND '.$lng2))
+                ->get();
 
-            return json_encode($facilities);
+        return json_encode($facilities);
     }
 
 }

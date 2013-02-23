@@ -14,7 +14,9 @@ class FacilitiesTableSeeder extends Seeder {
             'description'       => 'This is the city hall of Atlanta',
             'phone'             => '5555555555',
             'contact_name'      => 'John Doe',
-            'email'             => 'john@doe.com'
+            'email'             => 'john@doe.com',
+            'latitude'               => '33.74895280',
+            'longitude'               => '-84.39049340'
         ],
         [ 
             'name'              => 'Trinity Church',
@@ -25,7 +27,9 @@ class FacilitiesTableSeeder extends Seeder {
             'description'       => 'This is Trinity United Methodist Church',
             'phone'             => '3333333333',
             'contact_name'      => 'Jim Smith',
-            'email'             => 'jim@smith.com'
+            'email'             => 'jim@smith.com',
+            'latitude'               => '33.74253220',
+            'lng'               => '-84.39047680'
         ],
         [ 
             'name'              => 'Hypepotamus',
@@ -36,7 +40,9 @@ class FacilitiesTableSeeder extends Seeder {
             'description'       => 'This is Hypepotamus',
             'phone'             => '1111111111',
             'contact_name'      => 'Sue Jones',
-            'email'             => 'sue@jones.com'
+            'email'             => 'sue@jones.com',
+            'latitude'               => '33.77829538029150',
+            'lng'               => '-84.38579221970851'
         ],
         [ 
             'name'              => 'The Tabernacle',
@@ -47,7 +53,9 @@ class FacilitiesTableSeeder extends Seeder {
             'description'       => 'This is the Tabernacle',
             'phone'             => '4444444444',
             'contact_name'      => 'Bill Washington',
-            'email'             => 'bill@washington.com'
+            'email'             => 'bill@washington.com',
+            'latitude'               => '33.75892730',
+            'lng'               => '-84.39144250'           
         ],
         [ 
             'name'              => 'Starbucks',
@@ -58,9 +66,10 @@ class FacilitiesTableSeeder extends Seeder {
             'description'       => 'This is the coffee place',
             'phone'             => '8888888888',
             'contact_name'      => 'John Coffee',
-            'email'             => 'joe@coffee.com'
+            'email'             => 'joe@coffee.com',
+            'latitude'               => '33.78802163029150',
+            'lng'               => '-84.38610101970849'
         ]
-
     ];
 
     DB::table('facilities')->insert($Facilities);
