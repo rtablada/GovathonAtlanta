@@ -1,0 +1,55 @@
+# TypeError: 'undefined' is not an object (evaluating 'newRoute.$route.controller')
+    at http://localhost:3501/scripts/6637efbe.main.js:137
+    at http://localhost:3501/components/angular/angular.js:8243
+    at updateRoute (http://localhost:3501/components/angular/angular.js:7349)
+    at http://localhost:3501/components/angular/angular.js:8243
+    at afterLocationChange (http://localhost:3501/components/angular/angular.js:5582)
+    at http://localhost:3501/components/angular/angular.js:5570
+    at http://localhost:3501/components/angular/angular.js:7993
+    at http://localhost:3501/components/angular/angular.js:7858
+    at http://localhost:3501/components/angular/angular.js:8079
+    at http://localhost:3501/components/angular/angular.js:965
+    at invoke (http://localhost:3501/components/angular/angular.js:2843)
+    at bootstrap (http://localhost:3501/components/angular/angular.js:966)
+    at angularInit (http://localhost:3501/components/angular/angular.js:936)
+    at http://localhost:3501/components/angular/angular.js:14729
+    at trigger (http://localhost:3501/components/angular/angular.js:1723)
+    at http://localhost:3501/components/angular/angular.js:1958 (undefined, #undefined)
+CACHE MANIFEST
+
+# Time: Sat Feb 23 2013 13:17:24 GMT-0500 (Eastern Standard Time)
+# This manifest was created by confess.js, http://github.com/jamesgpearce/confess
+#
+# Retrieved URL: http://localhost:3501/#/about
+# User-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.12 Safari/535.11
+#
+# Config:
+#  task: appcache
+#  userAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.12 Safari/535.11
+#  wait: 0
+#  consolePrefix: #
+#  verbose: true
+#  appcache:
+#   urlsFromDocument: true
+#   urlsFromRequests: false
+#   cacheFilter: .*
+#   networkFilter: null
+#  url: http://localhost:3501
+#  configFile: c:\Users\aperrins\AppData\Roaming\npm\node_modules\yeoman\lib\support\confess.json
+
+CACHE:
+components/angular/angular.js
+components/underscore/underscore.js
+http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js
+http://localhost:3501/app/images/glyphicons-halflings-white.png?1361595303
+http://localhost:3501/images/53f46de4.glyphicons-halflings.png
+http://localhost:3501/images/bce06151.bg.jpg
+https://maps.googleapis.com/maps/api/js?key=AIzaSyCO30yN3rweCsE4wqPCUyMH-bpBgK8GYpM&sensor=false
+https://maps.gstatic.com/intl/en_us/mapfiles/api-3/12/0/main.js
+scripts/6637efbe.main.js
+scripts/6def94c3.plugins.js
+scripts/vendor/cf69c6f2.modernizr.min.js
+styles/d613064d.main.css
+
+NETWORK:
+*
