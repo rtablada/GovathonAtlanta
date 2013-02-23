@@ -9,7 +9,7 @@ class FacilitiesController extends BaseController {
 	 */
 	public function index()
 	{
-		//
+		return Facility::all();
 	}
 
 	/**

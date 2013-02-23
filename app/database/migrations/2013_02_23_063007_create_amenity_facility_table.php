@@ -11,11 +11,11 @@ class CreateAmenityFacilityTable extends Migration {
 	 */
 	public function up()
 	{
-	  Schema::create('facility', function($table)
+	  Schema::create('amenity_facility', function($table)
 	  {
 	    $table->increments('id');
 	    $table->integer('amenity_id');
-			$table->integer('facility_id');
+		$table->integer('facility_id');
 	    $table->timestamps();
 	  });
 	}
@@ -27,7 +27,7 @@ class CreateAmenityFacilityTable extends Migration {
 	 */
 	public function down()
 	{
-	  Schema::drop('facility');
+	  Schema::drop('amenity_facility');
 	}
 
 }
